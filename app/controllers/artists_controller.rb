@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  
   def index
   end
 
@@ -8,6 +9,18 @@ class ArtistsController < ApplicationController
   def edit
   end
 
+  def update
+  end
+
   def new
   end
+
+  def create
+  end
+
+  def destroy
+  end
+
+  private
+  
 end
