@@ -1,11 +1,12 @@
 class BillboardsController < ApplicationController
-  before_action :set_billboard, except: [:index, :new, :create]
+  before_action :set_billboard, only: [:show, :edit, :update, :destroy]
   
   def index
     @billboards = Billboard.all
   end
 
   def show
+    @songs = @billboard.songs
   end
 
   def edit
@@ -13,7 +14,7 @@ class BillboardsController < ApplicationController
 
   def update
     if @billboard.update(billboard_params)
-      redirect_to billboards_path
+      redirect_to billboard_path(@billboard)
     else
       render :edit
     end
@@ -39,7 +40,7 @@ class BillboardsController < ApplicationController
 
   private
   def billboard_params
-    params.require(:id).permit(:charts)
+    params.require(:billboard).permit(:charts)
   end
 
   def set_billboard

@@ -1,6 +1,4 @@
-<h1>Top Songs</h1>
-<% @artist.songs.each do |songs| %>
-    <%= render "songs/song", { song: songs } %>
-  <% end %>  
+<h1><%= @billboard.charts %></h1>
 
-<%= link_to "Back to Billboards", billboards_path %>
+<%= link_to "Show Songs", billboard_songs_path(@billboard) %>
+<hr />

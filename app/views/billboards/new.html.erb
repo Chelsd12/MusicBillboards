@@ -1,0 +1,13 @@
+<hr />
+<%= form_for @billboard do |f|%>
+    <div class="field">
+      <%= f.label "New Billboard Chart" %><br />
+      <br />
+      <%= f.text_field :charts, required: true, placeholder: "New chart name" %>
+    </div>
+    <br />
+    <br />
+    <%= f.submit nil, class: "ui button primary" %>
+    <br />
+    <br />
+  <% end %>
