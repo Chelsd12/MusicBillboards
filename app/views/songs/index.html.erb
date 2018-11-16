@@ -1,7 +1,6 @@
-<h1><%= @billboard.charts %></h1>
+<h1> Songs </h1>
 <hr />
-<%= link_to "Add Song", new_billboard_song_path(@billboard) %>
-<%= link_to "Back to Billboards", billboard_path(@billboard) %>
+
 <ul>
   <% @songs.each do |songs| %>
     <li><%= songs.title %></li>

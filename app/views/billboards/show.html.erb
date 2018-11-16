@@ -1,4 +1,8 @@
 <h1><%= @billboard.charts %></h1>
 
-<%= link_to "Show Songs", billboard_songs_path(@billboard) %>
-<hr />
+<ul>
+  <%= @songs.each do |songs| %>
+    <li><%= songs.title %></li>
+    <li><%= songs.album %></li>
+  <% end %>
+</ul>

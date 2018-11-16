@@ -1,26 +1,26 @@
 10.times do
-    Billboard.create(
+    billboard = Billboard.create(
         charts: Faker::Music.genre
     )
+    10.times do 
+    billboard.songs.create(
+        title: Faker::Book.title,
+        album: Faker::Music.album
+    )
+    end
 end
 
-20.times do
-    Artist.create(
+10.times do
+    artist = Artist.create(
         name: Faker::Music.band
     )
+    10.times do
+    artist.songs.create(
+        title: Faker::Book.title,
+        album: Faker::Music.album
+    )
+    end
 end
 
-Artist.all.each do
-    title = Faker::Book.title,
-    album = Faker::Music.album,
-    billboard_id = rand(10) + 1
-    artist_id = rand(20) + 1
-    Song.create(
-        title: title,
-        album: album,
-        billboard_id: billboard_id,
-        artist_id: artist_id
-        )
-end
 
 puts "Successfully seeded"

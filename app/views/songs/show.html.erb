@@ -1,8 +1,8 @@
-<h1><%= @artist.name %> - <%= @song.title %></h1>
-<p><%= @artist.album %></p>
+<h1><%= @song.title %></h1>
 
-<%= link_to  "Add Comment", new_topic_comment_path(@topic) %>
-
-<% @topic.comments.each do |c| %>
-  <%= render "comments/comment", { comment: c } %>
-<% end %>
+<ul>
+  <%= @songs.each do |songs| %>
+    <li><%= songs.title %></li>
+    <li><%= songs.album %></li>
+  <% end %>
+</ul>

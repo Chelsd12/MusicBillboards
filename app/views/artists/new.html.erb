@@ -1,2 +1,13 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<hr />
+<%= form_for @artist do |a|%>
+    <div class="field">
+      <%= a.label "New Artist" %><br />
+      <br />
+      <%= a.text_field :name, required: true, placeholder: "New chart name" %>
+    </div>
+    <br />
+    <br />
+    <%= f.submit nil, class: "ui button primary" %>
+    <br />
+    <br />
+  <% end %>

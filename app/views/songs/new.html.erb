@@ -1,2 +1,12 @@
-<h1>Songs#new</h1>
-<p>Find me in app/views/songs/new.html.erb</p>
+<hr />
+<%= form_for @song do |s| %>
+    <div class="field">
+        <%= s.label :title %><br />
+        <%= s.text_field :title, required: true, autofocus: true, placeholder: "Song Title" %>
+        <br />
+        <%= s.label :album %><br />
+        <%= s.text_field :album, placeholder: "Album" %>
+    </div>
+    <br />
+    <%= f.submit nil, class: "ui button primary" %>
+<% end %>

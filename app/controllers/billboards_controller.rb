@@ -6,7 +6,7 @@ class BillboardsController < ApplicationController
   end
 
   def show
-    @songs = @billboard.songs
+    @songs = @billboard.songs.all
   end
 
   def edit
