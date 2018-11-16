@@ -1,2 +1,8 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<h1><%= @artist.name %> - <%= @song.title %></h1>
+<p><%= @artist.album %></p>
+
+<%= link_to  "Add Comment", new_topic_comment_path(@topic) %>
+
+<% @topic.comments.each do |c| %>
+  <%= render "comments/comment", { comment: c } %>
+<% end %>

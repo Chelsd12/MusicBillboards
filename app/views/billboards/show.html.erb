@@ -1,2 +1,6 @@
-<h1>Billboards#show</h1>
-<p>Find me in app/views/billboards/show.html.erb</p>
+<h1>Top Songs</h1>
+<% @artist.songs.each do |songs| %>
+    <%= render "songs/song", { song: songs } %>
+  <% end %>  
+
+<%= link_to "Back to Billboards", billboards_path %>
