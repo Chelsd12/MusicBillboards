@@ -1,0 +1,8 @@
+<h1> Top Billboard Songs </h1>
+
+<ul>
+<% @songs.each do |songs| %>
+  <li><%= songs.title %></li>
+  <li><%= songs.album %></li>
+<% end %>
+</ul>

@@ -33,7 +33,6 @@ class SongsController < ApplicationController
   end
 
   protected
-
   def song_called
     @song_called ||=
     if params[:billboard_id]
@@ -44,9 +43,6 @@ class SongsController < ApplicationController
   end
 
   private
-
-  
-
   def song_params
     params.require(:song).permit(:title, :album)
   end
