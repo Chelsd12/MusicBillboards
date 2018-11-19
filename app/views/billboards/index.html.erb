@@ -2,7 +2,7 @@
 <hr />
 <ul>
     <% @billboards.each do |b| %>
-        <li><%= link_to b.charts, billboard_path(b) %></li>
+        <li><%= link_to b.charts, billboard_songs_path(b) %></li>
     <% end %>
 </ul>
 <br />

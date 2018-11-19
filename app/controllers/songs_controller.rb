@@ -36,7 +36,7 @@ class SongsController < ApplicationController
   def song_called
     @song_called ||=
     if params[:billboard_id]
-      Billboard.find(paramd[:billboard_id])
+      Billboard.find(params[:billboard_id])
     else params[:artist_id]
       Artist.find(params[:artist_id])
     end
